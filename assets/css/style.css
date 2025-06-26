@@ -1,0 +1,69 @@
+/* 導覽列固定在頂部，佈局與樣式 */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8); /* 導覽列背景 (此例為白色半透明，可改為主題色) */
+  backdrop-filter: blur(5px);           /* 增加背景模糊效果，使導覽列半透明時更清晰 (可選) */
+  z-index: 1000;                        /* 確保導覽列處於最上層，不被其他元素覆蓋 */
+  padding: 10px 0;
+}
+/* 導覽列中的清單樣式 */
+.navbar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* 導覽列項目置中對齊 (可按需調整或使用 flex) */
+}
+.navbar-menu li {
+  display: inline-block;
+  margin: 0 15px;  /* 導覽項目左右間距 */
+}
+.navbar-menu a {
+  text-decoration: none;
+  color: inherit;  /* 文本顏色沿用主題預設，保持與頁面字體一致 */
+  font-weight: bold;
+}
+/* 滾動頁面時，導覽列加陰影（提高可讀性） */
+.navbar.scrolled {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* 為了確保內容不被固定導覽列遮擋，給 main 或 body 添加上內距 */
+body {
+  padding-top: 70px; /* 頁面頂部留出空間，數值略大於導覽列高度 */
+}
+/* 區塊標題與內容間距樣式 */
+section {
+  padding: 40px 20px 30px 20px; /* 區塊內部上下留白，左右留白以適應窄屏 */
+}
+section + section {
+  border-top: 1px solid #e0e0e0; /* 區塊間增加一條細分隔線 (淺灰)，突出區塊分界 */
+}
+section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-align: left; /* 區塊標題左對齊，可以改為center以置中 */
+}
+/* 清單項目的樣式微調 */
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+section ul li {
+  margin-bottom: 8px;
+}
+/* 手機等窄螢幕上的響應式調整 */
+@media (max-width: 768px) {
+  .navbar-menu li {
+    display: block;
+    margin: 10px 0;
+  }
+  .navbar-menu {
+    text-align: left;
+    padding-left: 20px;
+  }
+  body {
+    padding-top: 80px; /* 手機上導覽列可能多行顯示，適當增加上方間距 */
+  }
+}
