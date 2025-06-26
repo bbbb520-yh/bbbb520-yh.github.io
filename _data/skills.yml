@@ -1,0 +1,20 @@
+- category: 程式語言
+  items:
+    - name: Python
+      icon: devicon-python-plain
+    - name: HTML/CSS
+      icon: devicon-html5-plain
+
+- category: 實驗工具
+  items:
+    - name: Spin-Coating
+      icon: fa-vial
+    - name: Thermal Evaporation
+      icon: fa-temperature-high
+
+- category: 量測分析
+  items:
+    - name: LJV 測量
+      icon: fa-chart-line
+    - name: EL / CE 量測
+      icon: fa-lightbulb
