@@ -1,7 +1,12 @@
-title: 邢予泓 Sing Yuhong
-email: h9c2511@gmail.com
-description: >-
-  國立臺東大學 | 光電研究生 | 量子點發光二極體 QD-LED 製程與效率分析 | Python 自動化分析與跨領域實作
+# _config.yml
+title: "邢予泓 Sing Yuhong"
+name: "邢予泓"
+english_name: "Sing Yuhong"
+email: "h9c2511@gmail.com"
+github_username: "bbbb520-yh"
+description: "國立臺東大學｜量子點 LED｜薄膜製程｜Python"
+
+
 baseurl: "" # for GitHub Pages 留空
 url: "https://bbbb520-yh.github.io" # 改成你的 GitHub Pages 網址
 
