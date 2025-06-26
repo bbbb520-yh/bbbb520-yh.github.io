@@ -1,0 +1,35 @@
+<div class="skills-section">
+  {% for skill_group in site.data.skills %}
+    <h3>{{ skill_group.category }}</h3>
+    <ul class="skill-list">
+      {% for item in skill_group.items %}
+        <li>
+          {% if item.icon contains 'devicon' %}
+            <i class="{{ item.icon }}"></i>
+          {% else %}
+            <i class="fa {{ item.icon }}"></i>
+          {% endif %}
+          {{ item.name }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
+
+<style>
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+.skill-list li {
+  margin: 0.5rem 1rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.skill-list i {
+  font-size: 1.5rem;
+}
+</style>
