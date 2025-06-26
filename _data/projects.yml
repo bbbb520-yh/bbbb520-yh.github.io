@@ -1,0 +1,12 @@
+- title: QD-LED 效率提升研究
+  year: 2023–2024
+  description: 探討界面摻雜、厚度控制與插層材料對效率的影響，建立元件製作與量測流程。
+  tags: ["薄膜製程", "EL 測量", "元件開發"]
+  github: https://github.com/bbbb520-yh/papereader
+  pdf: /assets/pdf/qdled_project.pdf
+
+- title: PaperReader 自動論文監控工具
+  year: 2024
+  description: 使用 Python 與 RSS feed，建立關鍵字論文推播系統，支援 Telegram 通知。
+  tags: ["Python", "AI", "自動化"]
+  github: https://github.com/bbbb520-yh/papereader
