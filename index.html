@@ -1,98 +1,116 @@
 ---
 layout: default
-title: "邢予泓 Sing Yuhong"
+title: 邢予泓 Sing Yuhong
 ---
 
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="邢予泓的個人網站，展示光電研究背景與技能，專長於量子點發光二極體與自動化工具。">
-  <title>邢予泓 Sing Yuhong | 光電研究與技能履歷</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
-  <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #222; }
-    .container { max-width: 960px; margin: auto; padding: 2rem; }
-    h1, h2 { border-bottom: 2px solid #ddd; padding-bottom: .5rem; }
-    a { color: #007acc; text-decoration: none; }
-    .section { margin-bottom: 2rem; }
-    details { background: #f0f0f0; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
-    summary { font-weight: bold; cursor: pointer; font-size: 1.1rem; }
-    ul { padding-left: 1.5rem; }
-    .contact a { margin-right: 1rem; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>邢予泓 Sing Yuhong</h1>
-      <p>國立臺東大學 應用科技系物理組（2021–2025）<br>
-         研究專長：量子點發光二極體效率提升、薄膜製程、Python 自動化分析</p>
-      <div class="contact">
-        📧 <a href="mailto:h9c2511@gmail.com">h9c2511@gmail.com</a>
-        🔗 <a href="https://github.com/bbbb520-yh" target="_blank">GitHub</a>
-        🔗 <a href="https://linkedin.com/in/sing-yuhong" target="_blank">LinkedIn</a>
-        📄 <a href="/resume.pdf" target="_blank">下載 PDF 履歷</a>
-      </div>
-    </header>
+{% include nav.html %}
 
-    <section class="section">
-      <h2>關於我</h2>
-      <p>我熱衷於光電元件的設計與優化，特別聚焦於量子點發光二極體（QD-LED）效率提升技術，擅長薄膜製程（如 spin-coating、蒸鍍）與實驗數據分析（如 LJV、CE、EL）。近年也積極探索 AI 工具整合以提升實驗與資料處理效率。</p>
-    </section>
+<section id="about">
+  {% include about.html %}
+</section>
 
-    <section class="section">
-      <h2>技能分類</h2>
-      <ul>
-        <li>🧠 程式語言：Python（爬蟲、資料分析、自動化腳本）</li>
-        <li>📊 分析與繪圖：Origin、matplotlib、Excel</li>
-        <li>🧪 實驗技能：Spin-coating、Thermal Evaporation、LJV/CE/EL 測量</li>
-        <li>⚙️ 系統整合：Notion + GitHub 工作流、自動化筆記整理</li>
-      </ul>
-    </section>
+<section id="skills">
+  {% include skills.html %}
+</section>
 
-    <section class="section">
-      <h2>教育背景</h2>
-      <ul>
-        <li>
-          <strong>國立臺東大學 National Taitung University</strong><br>
-          應用科技系物理組，學士學位（2021–2025）<br>
-          研究主題：QD-LED 材料摻雜與介面結構對效率的影響
-        </li>
-      </ul>
-    </section>
+<section id="projects">
+  {% include projects.html %}
+</section>
 
-    <section class="section">
-      <h2>研究經驗</h2>
-      <details open>
-        <summary>QD-LED 效率提升研究（2023–2024）</summary>
-        <ul>
-          <li>目標：探索不同摻雜材料、厚度調控對發光效率的影響</li>
-          <li>製程技術：Spin-coating、熱蒸鍍</li>
-          <li>量測工具：LJV、CE、EL 測試儀</li>
-          <li>成果：提升元件效率 25%，穩定性提升 40%</li>
-        </ul>
-      </details>
-    </section>
+<section id="education">
+  {% include education.html %}
+</section>
 
-    <section class="section">
-      <h2>專案連結</h2>
-      <ul>
-        <li><a href="https://github.com/bbbb520-yh/papereader" target="_blank">📚 PaperReader – 關鍵字自動追蹤學術論文工具</a></li>
-      </ul>
-    </section>
+<section id="contact">
+  {% include contact.html %}
+</section>
 
-    <section class="section">
-      <h2>延伸學習與興趣</h2>
-      <ul>
-        <li>探索自架 AI 系統（如 Ollama、本地 Agent）進行隱私資料管理</li>
-        <li>整合 Notion + GitHub 進行健康與研究追蹤</li>
-        <li>持續學習資料視覺化與 AI 金融分析應用</li>
-      </ul>
-    </section>
-  </div>
-</body>
-</html>
+<a href="#top" class="back-to-top" aria-label="回到最上面">⬆️</a>
 
+<style>
+/* 字體與配色 */
+body {
+  font-family: 'Noto Sans', 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 導覽列與按鈕可由 nav.html 控制 */
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 回到頂部按鈕 */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007acc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #005f99;
+}
+
+/* 圖示與區塊標題搭配 */
+section h2::before {
+  content: '✨ ';
+  color: #10b981;
+  margin-right: 0.3rem;
+}
+
+#projects h2::before {
+  content: '📁 ';
+}
+
+#skills h2::before {
+  content: '🛠️ ';
+}
+
+#education h2::before {
+  content: '🎓 ';
+}
+
+#contact h2::before {
+  content: '✉️ ';
+}
+</style>
+
+<script>
+document.addEventListener("scroll", () => {
+  const btn = document.querySelector(".back-to-top");
+  if (window.scrollY > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>
