@@ -1,50 +1,31 @@
-# Site settings
 title: 邢予泓 Sing Yuhong
-description: 個人網站 | 國立臺東大學 光電與量子點研究
-
-# baseurl: "" # 如部署在子路徑可使用，例如 /resume
-# url: "https://bbbb520-yh.github.io" # 網站正式網址
-
-# User settings
-username: 邢予泓 Sing Yuhong
-user_title: 光電研究學生 | 量子點發光二極體 | 薄膜製程 | Python
-user_description: >
-  我是國立臺東大學應用科技系物理組學生，研究重點為量子點發光二極體效率提升。
-  擅長薄膜製程（spin-coating、蒸鍍）、實驗數據分析（LJV / CE / EL）及程式撰寫（Python）。
-  致力於跨領域結合 AI 工具與光電元件開發，提升實驗效率與創新能力。
-
 email: h9c2511@gmail.com
+description: >-
+  國立臺東大學 | 光電研究生 | 量子點發光二極體 QD-LED 製程與效率分析 | Python 自動化分析與跨領域實作
+baseurl: "" # for GitHub Pages 留空
+url: "https://bbbb520-yh.github.io" # 改成你的 GitHub Pages 網址
+
+# 社群與連結設定（方便 future include 使用）
 github_username: bbbb520-yh
 linkedin_username: sing-yuhong
-# 你可自行補上其他社群帳號，如有：
-# instagram_username:
-# facebook_username:
-# twitter_username:
 
-# 履歷區塊設定（依據主題樣式）
-skills:
-  - Python
-  - Origin 資料分析
-  - Spin-coating
-  - 真空蒸鍍
-  - LJV / CE / EL 測量
+# Collections（可擴充 blog, portfolio, talks）
+markdown: kramdown
+theme: minima
 
-education:
-  - degree: B.S., Department of Applied Science – Physics Division
-    university: National Taitung University (國立臺東大學)
-    year: 2021 - 2025
-    details: |
-      - 主修光電與量子元件
-      - 研究主題為量子點發光二極體效率提升
-      - 修習太陽能電池、電子學、量子物理、電路理論等課程
+# Navigation list (optional for menu)
+nav:
+  - title: 關於我
+    url: "#about"
+  - title: 技能
+    url: "#skills"
+  - title: 專案
+    url: "#projects"
+  - title: 學歷
+    url: "#education"
+  - title: 聯絡
+    url: "#contact"
 
-projects:
-  - title: QD-LED Efficiency Enhancement Research
-    year: 2023 - 2024
-    description: >
-      利用摻雜、插層結構與厚度調控，提升量子點發光元件效率。
-      實驗流程涵蓋材料製備、薄膜塗佈、蒸鍍與發光量測（LJV/EL）。
-      使用 Origin 進行圖表與數據分析。
 
 # 不要部署這些目錄
 exclude: ['package.json', 'src', 'node_modules', 'vendor']
