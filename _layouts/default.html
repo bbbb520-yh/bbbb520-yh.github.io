@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="../assets/css/devicon.min.css">
 <html lang="en">
-  {% include head.html %}
-  <body>
-      {% include header.html %}
-      <section id="about">
-        {% include about.html %}
-      </section>
-        {{ content }}
-      {% include footer.html %}
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title | default: site.title }}</title>
+  <!-- 引入網站主要 CSS，保持原有配色與字體 -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- Favicon 圖示 -->
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon" />
+</head>
+<body>
+  <!-- 導覽列（固定頂端） -->
+  {% include nav.html %}
+  <!-- 主內容區域 -->
+  <main>
+    {{ content }}
+  </main>
+</body>
 </html>
