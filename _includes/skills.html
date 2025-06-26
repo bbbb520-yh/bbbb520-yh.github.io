@@ -1,35 +1,7 @@
-<div class="skills-section">
-  {% for skill_group in site.data.skills %}
-    <h3>{{ skill_group.category }}</h3>
-    <ul class="skill-list">
-      {% for item in skill_group.items %}
-        <li>
-          {% if item.icon contains 'devicon' %}
-            <i class="{{ item.icon }}"></i>
-          {% else %}
-            <i class="fa {{ item.icon }}"></i>
-          {% endif %}
-          {{ item.name }}
-        </li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-</div>
-
-<style>
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding-left: 0;
-}
-.skill-list li {
-  margin: 0.5rem 1rem 0.5rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.skill-list i {
-  font-size: 1.5rem;
-}
-</style>
+<h2>技能</h2>
+<ul>
+  <li><strong>程式語言：</strong>Python</li>
+  <li><strong>資料分析：</strong>Origin、Excel、自動繪圖</li>
+  <li><strong>薄膜製程：</strong>Spin-Coating、真空蒸鍍</li>
+  <li><strong>量測技術：</strong>LJV、CE、EL</li>
+</ul>
