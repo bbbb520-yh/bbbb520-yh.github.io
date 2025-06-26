@@ -1,94 +1,188 @@
 ---
-layout: default
+layout: cv
+title: "邢予泓 Sing Yuhong"
 ---
 
-<div class="wrapper">
-  <div class="profile-card">
-    <h1>邢予泓 Sing Yuhong</h1>
-    <h3>量子點 LED 研究｜薄膜製程｜Python</h3>
-    <p>📧 <a href="mailto:h9c2511@gmail.com">h9c2511@gmail.com</a></p>
-    <p>
-      <a href="https://github.com/bbbb520-yh" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/in/sing-yuhong" target="_blank">LinkedIn</a>
-    </p>
-    <p><a href="/resume.pdf" target="_blank">📄 下載 PDF 履歷</a></p>
-  </div>
-
-  <div class="content">
-    <section>
-      <h2>關於我</h2>
-      <p>
-        我是國立臺東大學應用科技系物理組學生，研究方向為量子點發光二極體（QD-LED）效率提升。熟悉薄膜製程（spin-coating、蒸鍍）、光電量測（LJV/CE/EL），並具備 Python 自動化資料分析與繪圖能力。
-      </p>
-    </section>
-
-    <section>
-      <h2>教育背景</h2>
-      <ul>
-        <li><strong>國立臺東大學 (National Taitung University)</strong><br />
-          應用科技系物理組，學士學位（2021–2025）<br />
-          研究：量子點 LED 材料與製程優化
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>技能</h2>
-      <ul>
-        <li>程式語言：Python</li>
-        <li>軟體工具：Origin</li>
-        <li>實驗技術：Spin-coating、真空蒸鍍、LJV / CE / EL 測量</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>研究經驗</h2>
-      <ul>
-        <li>
-          <strong>QD-LED 效率提升研究</strong>（2023–2024）<br />
-          探討界面摻雜、厚度控制與插層材料對效率的影響，建立元件製作與量測流程。
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>專案連結</h2>
-      <ul>
-        <li><a href="https://github.com/bbbb520-yh/papereader" target="_blank">📚 PaperReader – 關鍵字自動抓取論文工具</a></li>
-        <!-- 可依需要增加更多 -->
-      </ul>
-    </section>
-  </div>
+<div id="about">
+  <h1>邢予泓 Sing Yuhong</h1>
+  <p>🎓 國立臺東大學 應用科技系物理組（2021–2025）<br>
+     📌 專研量子點發光二極體效率提升、具備薄膜製程與資料處理能力。</p>
 </div>
 
+---
+
+<h2>🧠 技能概覽</h2>
+
+<details open>
+  <summary>⚙️ 程式語言與工具</summary>
+  <ul>
+    <li>Python：資料分析、繪圖、簡易自動化</li>
+    <li>Origin：實驗數據處理與繪圖</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🧪 實驗技能</summary>
+  <ul>
+    <li>Spin-coating：均勻發光層製程</li>
+    <li>Thermal evaporation：金屬與有機層蒸鍍</li>
+    <li>LJV、CE、EL：電流電壓與效率測試</li>
+  </ul>
+</details>
+
+---
+
+<h2>🔬 研究與專案經驗</h2>
+
+<details open>
+  <summary>QLED 材料與製程優化（2023–2024）</summary>
+  <ul>
+    <li>🎯 <strong>研究目標</strong>：提升量子點發光二極體效率</li>
+    <li>🧪 <strong>研究方法</strong>：摻雜調控、插入薄膜、厚度優化</li>
+    <li>🔬 <strong>儀器分析</strong>：LJV、CE、EL、AFM</li>
+    <li>📈 <strong>成果</strong>：效率提升 25%、穩定性延長 40%</li>
+  </ul>
+</details>
+
+<details>
+  <summary>PaperReader 自動抓文系統（Python 專案）</summary>
+  <ul>
+    <li>🗂️ 關鍵字抓取、arXiv 自動摘要</li>
+    <li>🤖 使用 OpenAI API + feedparser + YAML 配置</li>
+    <li>🔗 <a href="https://github.com/bbbb520-yh/papereader" target="_blank">GitHub 專案連結</a></li>
+  </ul>
+</details>
+
+---
+
+<h2>📄 教育背景</h2>
+
+<ul>
+  <li><strong>國立臺東大學 National Taitung University</strong><br>
+      Bachelor of Science, Department of Applied Science – Physics Division<br>
+      2021–2025</li>
+</ul>
+
+---
+
+<h2>📬 聯絡方式</h2>
+
+<ul>
+  <li>📧 h9c2511@gmail.com</li>
+  <li>🌐 <a href="https://github.com/bbbb520-yh" target="_blank">GitHub: bbbb520-yh</a></li>
+  <li>📝 <a href="/resume.pdf" target="_blank">點我下載 PDF 履歷</a></li>
+</ul>
+
+---
+
 <style>
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
+summary {
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 1em;
 }
-.profile-card {
-  flex: 1;
-  background: #f1f1f1;
-  padding: 1.5rem;
-  border-radius: 10px;
+details {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 1em;
 }
-.content {
-  flex: 2;
+ul {
+  margin: 0.5em 0 1em 1.5em;
 }
-.content section {
-  margin-bottom: 2rem;
+</style>
+---
+layout: cv
+title: "邢予泓 Sing Yuhong"
+---
+
+<div id="about">
+  <h1>邢予泓 Sing Yuhong</h1>
+  <p>🎓 國立臺東大學 應用科技系物理組（2021–2025）<br>
+     📌 專研量子點發光二極體效率提升、具備薄膜製程與資料處理能力。</p>
+</div>
+
+---
+
+<h2>🧠 技能概覽</h2>
+
+<details open>
+  <summary>⚙️ 程式語言與工具</summary>
+  <ul>
+    <li>Python：資料分析、繪圖、簡易自動化</li>
+    <li>Origin：實驗數據處理與繪圖</li>
+  </ul>
+</details>
+
+<details>
+  <summary>🧪 實驗技能</summary>
+  <ul>
+    <li>Spin-coating：均勻發光層製程</li>
+    <li>Thermal evaporation：金屬與有機層蒸鍍</li>
+    <li>LJV、CE、EL：電流電壓與效率測試</li>
+  </ul>
+</details>
+
+---
+
+<h2>🔬 研究與專案經驗</h2>
+
+<details open>
+  <summary>QLED 材料與製程優化（2023–2024）</summary>
+  <ul>
+    <li>🎯 <strong>研究目標</strong>：提升量子點發光二極體效率</li>
+    <li>🧪 <strong>研究方法</strong>：摻雜調控、插入薄膜、厚度優化</li>
+    <li>🔬 <strong>儀器分析</strong>：LJV、CE、EL、AFM</li>
+    <li>📈 <strong>成果</strong>：效率提升 25%、穩定性延長 40%</li>
+  </ul>
+</details>
+
+<details>
+  <summary>PaperReader 自動抓文系統（Python 專案）</summary>
+  <ul>
+    <li>🗂️ 關鍵字抓取、arXiv 自動摘要</li>
+    <li>🤖 使用 OpenAI API + feedparser + YAML 配置</li>
+    <li>🔗 <a href="https://github.com/bbbb520-yh/papereader" target="_blank">GitHub 專案連結</a></li>
+  </ul>
+</details>
+
+---
+
+<h2>📄 教育背景</h2>
+
+<ul>
+  <li><strong>國立臺東大學 National Taitung University</strong><br>
+      Bachelor of Science, Department of Applied Science – Physics Division<br>
+      2021–2025</li>
+</ul>
+
+---
+
+<h2>📬 聯絡方式</h2>
+
+<ul>
+  <li>📧 h9c2511@gmail.com</li>
+  <li>🌐 <a href="https://github.com/bbbb520-yh" target="_blank">GitHub: bbbb520-yh</a></li>
+  <li>📝 <a href="/resume.pdf" target="_blank">點我下載 PDF 履歷</a></li>
+</ul>
+
+---
+
+<style>
+summary {
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 1em;
 }
-a {
-  color: #007acc;
-  text-decoration: none;
+details {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 1em;
 }
-@media (max-width: 768px) {
-  .wrapper {
-    flex-direction: column;
-  }
+ul {
+  margin: 0.5em 0 1em 1.5em;
 }
 </style>
