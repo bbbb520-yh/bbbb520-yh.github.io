@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title | default: site.title }}</title>
   <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
 
-  <!-- 引入網站主要 CSS，保持原有配色與字體 -->
+  <!-- ✅ 引入主題字體、reset、基本樣式 -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <!-- ✅ 引入自訂樣式（導覽列、區塊樣式等） -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <!-- Favicon 圖示 -->
+
+  <!-- ✅ 網站 favicon 圖示 -->
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon" />
 </head>
 <body>
-  <!-- 導覽列（固定頂端） -->
+  <!-- ✅ 導覽列（固定頂端） -->
   {% include nav.html %}
-  <!-- 主內容區域 -->
+
+  <!-- ✅ 主內容區域 -->
   <main>
     {{ content }}
   </main>
 </body>
 </html>
+
