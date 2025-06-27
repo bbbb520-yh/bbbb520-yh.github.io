@@ -7,8 +7,8 @@ github_username: "bbbb520-yh"
 description: "國立臺東大學｜量子點 LED｜薄膜製程｜Python"
 
 
-baseurl: "" # for GitHub Pages 留空
-url: "https://bbbb520-yh.github.io" # 改成你的 GitHub Pages 網址
+baseurl: "https://bbbb520-yh.github.io" # for GitHub Pages 留空
+url: "https://github.com/bbbb520-yh" # 改成你的 GitHub Pages 網址
 
 # 社群與連結設定（方便 future include 使用）
 github_username: bbbb520-yh
