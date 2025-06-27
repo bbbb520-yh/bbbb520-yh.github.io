@@ -1,69 +1,179 @@
-/* 導覽列固定在頂部，佈局與樣式 */
+/* ========== Reset 基本樣式重設 ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 70px; /* 導覽列預留空間 */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0077cc;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== 導覽列 ========== */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8); /* 導覽列背景 (此例為白色半透明，可改為主題色) */
-  backdrop-filter: blur(5px);           /* 增加背景模糊效果，使導覽列半透明時更清晰 (可選) */
-  z-index: 1000;                        /* 確保導覽列處於最上層，不被其他元素覆蓋 */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
   padding: 10px 0;
+  border-bottom: 1px solid #ccc;
 }
-/* 導覽列中的清單樣式 */
+
 .navbar-menu {
-  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin: 0;
   padding: 0;
-  text-align: center; /* 導覽列項目置中對齊 (可按需調整或使用 flex) */
 }
-.navbar-menu li {
-  display: inline-block;
-  margin: 0 15px;  /* 導覽項目左右間距 */
-}
-.navbar-menu a {
+
+.navbar-menu li a {
   text-decoration: none;
-  color: inherit;  /* 文本顏色沿用主題預設，保持與頁面字體一致 */
+  color: inherit;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
-/* 滾動頁面時，導覽列加陰影（提高可讀性） */
+
+.navbar-menu li a:hover {
+  color: #005999;
+}
+
 .navbar.scrolled {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* 為了確保內容不被固定導覽列遮擋，給 main 或 body 添加上內距 */
-body {
-  padding-top: 70px; /* 頁面頂部留出空間，數值略大於導覽列高度 */
-}
-/* 區塊標題與內容間距樣式 */
+
+/* ========== 區塊設定 ========== */
 section {
-  padding: 40px 20px 30px 20px; /* 區塊內部上下留白，左右留白以適應窄屏 */
+  padding: 40px 20px 30px 20px;
 }
+
 section + section {
-  border-top: 1px solid #e0e0e0; /* 區塊間增加一條細分隔線 (淺灰)，突出區塊分界 */
+  border-top: 1px solid #e0e0e0;
 }
+
 section h2 {
   margin-bottom: 15px;
   font-size: 1.5em;
-  text-align: left; /* 區塊標題左對齊，可以改為center以置中 */
+  text-align: left;
+  border-bottom: 2px solid #0077cc;
+  display: inline-block;
+  padding-bottom: 0.3rem;
 }
-/* 清單項目的樣式微調 */
+
 section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 section ul li {
   margin-bottom: 8px;
 }
-/* 手機等窄螢幕上的響應式調整 */
+
+/* ========== about 區塊 ========== */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.profile-photo,
+.img-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-square {
+  width: 300px;
+  height: 300px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.img-rounded {
+  width: 150px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* ========== 技能區塊 ========== */
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.skills-text {
+  flex: 2;
+}
+
+.skills-image {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ========== 聯絡方式 ========== */
+#contact a {
+  font-weight: bold;
+  word-break: break-word;
+}
+
+/* ========== 響應式設計 ========== */
 @media (max-width: 768px) {
-  .navbar-menu li {
-    display: block;
-    margin: 10px 0;
-  }
   .navbar-menu {
+    flex-direction: column;
+    gap: 1rem;
     text-align: left;
     padding-left: 20px;
   }
+
+  .about-container,
+  .skills-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
   body {
-    padding-top: 80px; /* 手機上導覽列可能多行顯示，適當增加上方間距 */
+    padding-top: 80px;
   }
 }
