@@ -79,6 +79,8 @@ section h2 {
   gap: 3rem;
   align-items: center;
   padding: 3rem 0;
+  background-color: #002f6c; /* 深藍色背景 */
+  color: white;              /* 白色文字 */
 }
 
 .profile-photo,
