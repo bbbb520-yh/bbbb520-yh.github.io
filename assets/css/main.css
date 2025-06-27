@@ -10,7 +10,7 @@ body {
   background-color: #f8f9fa;
   color: #333;
   line-height: 1.6;
-  padding: 2rem;
+  padding-top: 70px; /* 導覽列預留空間 */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,24 +35,30 @@ img {
 
 /* ========== 導覽列 ========== */
 .navbar {
-  background: #ffffff;
-  border-bottom: 1px solid #ccc;
-  padding: 1rem 2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 999;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .navbar-menu {
   display: flex;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-menu li a {
+  text-decoration: none;
+  color: inherit;
   font-weight: bold;
-  padding: 0.5rem;
   transition: color 0.3s ease;
 }
 
@@ -60,27 +66,47 @@ img {
   color: #005999;
 }
 
-/* ========== 區塊通用設定 ========== */
+.navbar.scrolled {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== 區塊設定 ========== */
 section {
-  margin-bottom: 3rem;
+  padding: 40px 20px 30px 20px;
+}
+
+section + section {
+  border-top: 1px solid #e0e0e0;
 }
 
 section h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-align: left;
   border-bottom: 2px solid #0077cc;
   display: inline-block;
   padding-bottom: 0.3rem;
 }
 
-/* ========== 關於我 ========== */
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section ul li {
+  margin-bottom: 8px;
+}
+
+/* ========== about 區塊 ========== */
 .about-container {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
   align-items: center;
   padding: 3rem 0;
-  background-color: #002f6c; /* 深藍色背景 */
-  color: white;              /* 白色文字 */
+  background-color: #002f6c;
+  color: white;
 }
 
 .profile-photo,
@@ -90,6 +116,7 @@ section h2 {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid white;
 }
 
 .img-square {
@@ -136,13 +163,20 @@ section h2 {
 
 /* ========== 響應式設計 ========== */
 @media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    padding-left: 20px;
+  }
+
   .about-container,
   .skills-wrapper {
     flex-direction: column;
     align-items: center;
   }
-  .navbar-menu {
-    flex-direction: column;
-    gap: 1rem;
+
+  body {
+    padding-top: 80px;
   }
 }
