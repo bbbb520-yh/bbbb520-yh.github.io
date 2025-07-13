@@ -86,3 +86,21 @@ title: 我的履歷網站
 }
 </style>
 
+<!-- 回到頂部按鈕 -->
+<button id="backToTop" style="display:none;position:fixed;bottom:40px;right:40px;z-index:2000;padding:12px 18px;background:#88a0b9;color:#232a34;border:none;border-radius:30px;font-size:1.1em;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);transition:background 0.2s;">▲ 回到頂部</button>
+<script>
+// 顯示/隱藏按鈕
+window.addEventListener('scroll', function() {
+  const btn = document.getElementById('backToTop');
+  if(window.scrollY > 200) {
+    btn.style.display = 'block';
+  } else {
+    btn.style.display = 'none';
+  }
+});
+// 平滑滾動回頂部
+ document.getElementById('backToTop').onclick = function() {
+   window.scrollTo({top:0, behavior:'smooth'});
+ };
+</script>
+
