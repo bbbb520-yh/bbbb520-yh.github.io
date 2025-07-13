@@ -1,0 +1,104 @@
+---
+layout: default
+title: My Resume Website
+---
+<!-- Home content: include each modular section in order -->
+<section id="about">
+  {% include about-en.html %}
+</section>
+{% include skills-en.html %}
+{% include projects-en.html %}
+{% include education-en.html %}
+{% include activities-en.html %}
+{% include languages-en.html %}
+{% include contact-en.html %}
+
+<style>
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+.skill-image {
+  margin: 10px;
+}
+
+.profile-photo,
+.img-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.img-square {
+  width: 300px;
+  height: 300px;
+  border-radius: 0;
+  object-fit: cover;
+}
+.img-square_A {
+  width: 500px;
+  height: 300px;
+  border-radius: 0;
+  object-fit: cover;
+}
+.img-square_B {
+  width: 500px;
+  height: 500px;
+  border-radius: 0;
+  object-fit: cover;
+}
+.img-square_C {
+  width: 200px;
+  height: 400px;
+  border-radius: 0;
+  object-fit: cover;
+}
+.img-square_X {
+  width: 400px;
+  height: 300px;
+  border-radius: 0;
+  object-fit: cover;
+}
+.img-square_D {
+  width: 300px;
+  height: 400px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.img-rounded {
+  width: 150px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+</style>
+
+<!-- Back to top button (same as zh) -->
+<button id="backToTop" style="display:none;position:fixed;bottom:40px;right:40px;z-index:2000;padding:12px 18px;background:#88a0b9;color:#232a34;border:none;border-radius:30px;font-size:1.1em;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);transition:background 0.2s;">▲ Back to Top</button>
+<script>
+window.addEventListener('scroll', function() {
+  const btn = document.getElementById('backToTop');
+  if(window.scrollY > 200) {
+    btn.style.display = 'block';
+  } else {
+    btn.style.display = 'none';
+  }
+});
+document.getElementById('backToTop').onclick = function() {
+  window.scrollTo({top:0, behavior:'smooth'});
+};
+</script>
+
